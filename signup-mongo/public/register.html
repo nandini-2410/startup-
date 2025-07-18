@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPSPARK - Register</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="nav">
+    <ul>
+      <li id="signin"  onclick="window.location.href = 'signin.html'">Sign in</li>
+      <li id="resource">Resource</li>
+      <li id="upspark" onclick="window.location.href='home.html'">UPSPARK</li>
+      <li id="aboutus">About us</li>
+      <li id="signup" onclick="window.location.href = 'signup.html'">Sign up</li>
+    </ul>
+  </div>
+
+  <!-- Glass Box Container -->
+  <div class="glass-container">
+    
+    <!-- On-Chain Box -->
+    <div class="glass-box">
+      <h2>On-Chain Registration</h2>
+      <h3>"Your idea will be securely stored on a blockchain network, which means once it is submitted, it becomes a permanent, tamper-proof record. The decentralized nature of blockchain ensures that no single entity controls the data, increasing trust and transparency. Every transaction is cryptographically signed and timestamped, allowing anyone to verify the authenticity and history of the submission without relying on a central authority. This immutable record guarantees that your idea cannot be altered or deleted, providing strong protection against fraud, plagiarism, or unauthorized changes."
+
+      </h3>
+      <button onclick="window.location.href='onchain.html'">Register On-Chain</button>
+    </div>
+
+    <!-- Off-Chain Box -->
+    <div class="glass-box">
+      <h2>Off-Chain Registration</h2>
+      <h3>"Your idea will be saved in our secure off-chain database, which is best suited for storing less critical or large-size data such as detailed descriptions, images, documents, or additional metadata. While the core registration details are recorded on the blockchain for immutability and verification, the database allows faster access, easier updates, and more flexibility. This hybrid approach ensures both security and performance — the blockchain secures ownership and timestamping, while the database efficiently handles rich and dynamic content."</h3>
+      <button onclick="window.location.href='REGISTRATION.HTML'">Register Off-Chain</button>
+    </div>
+    
+  </div>
+  <script>
+  window.onload = function () {
+    const user = localStorage.getItem('loggedInUser');
+    if (!user) {
+      alert(" You must be signed in to access this page.");
+      window.location.href = 'signin.html';
+    }
+  };
+</script>
+
+</body>
+</html>

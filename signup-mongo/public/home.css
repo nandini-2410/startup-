@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+.lets{
+    font-size: 55px;
+    position: fixed;
+    left: 410px;
+    top: 210px;
+    color: darkgray;
+}
+.bright {
+    display: block;
+    text-align: center;
+}
+.nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    background-color: #212146; /* Optional background */
+    font-size: 30px;
+    color: skyblue;
+    text-shadow: 5px 1px 2px rgb(1, 20, 36);
+    background: linear-gradient(to bottom, rgba(1, 1, 51), #212146);
+
+  }
+  
+  .nav ul li {
+    margin: 0 40px;
+  }
+  
+  .nav ul li a {
+    text-decoration: none;
+    border: 1px  lightskyblue;
+  }
+#upspark {
+    font-size: 45px;
+    color: skyblue;
+}
+.whatsapp{
+    position: relative;
+    top: 480px;
+    left: 30px;
+    align-items: center;
+    
+}
+.front{
+    /* background-color: #150857; */
+    width: 1000px;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 150px;
+    left: 200px;
+    border-radius: 20px;
+    background-image: url("https://tse2.mm.bing.net/th?id=OIP.lfOJ2hmhppg9VuSpj1663wHaDQ&pid=Api&P=0&h=180");
+    background-size: 100%;
+    filter: blur(20%);
+}
+.start{
+    font-size: 20px;
+    color: rgb(129, 179, 226);
+    position: fixed;
+    top: 550px;
+    left: 270px;
+    font: bold;
+
+}
+.start a {
+    padding: 15px 25px;
+    border: 2px solid dodgerblue;  /* Blue border */
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 10px;  /* Optional: rounded corners */
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0 90px;
+}
+
+.start a:hover {
+
+    color: dodgerblue;
+    text-shadow: 0 0 8px dodgerblue,
+                 0 0 15px dodgerblue,
+                 0 0 25px dodgerblue;
+    transform: scale(1.05); /* Optional */
+}

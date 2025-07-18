@@ -1,0 +1,179 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const path = require("path");
+const fs =require('fs')
+const app = express();
+const port = 3001;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));                                                                                                                
+app.use('/contracts', express.static(path.join(__dirname, 'public/contracts')));
+
+app.get('/register', (req, res) => {
+  if (!tempSession) {
+    return res.redirect('/signin.html');
+  }
+  res.sendFile(path.join(__dirname, 'public', 'register.html'));
+});
+
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
+
+mongoose.connect('mongodb://127.0.0.1:27017/signupDB')
+.then(() => console.log('Connected to MongoDB: signupDB'))
+  .catch((err) => console.error('MongoDB connection error (signupDB):', err));
+
+
+const registerOffConnection = mongoose.createConnection('mongodb://127.0.0.1:27017/registeroff');
+
+
+registerOffConnection.once('open', () => {
+  console.log(' Connected to MongoDB: registeroff');
+});
+
+const userSchema = new mongoose.Schema({
+  name: String,
+  surname: String,
+  username: String,
+  password: String
+});
+const User = mongoose.model('User', userSchema); 
+
+const startupSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  idea: String,
+  info: String
+});
+const Startup = registerOffConnection.model('Startup', startupSchema);
+
+let tempSession = null;
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public','home.html'));
+});
+
+app.get('/resource', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public','resources.html'));
+});
+
+app.get('/navigator', (req, res) => {
+  if (!tempSession) {
+    return res.redirect('/signin.html');
+  }
+  res.sendFile(path.join(__dirname, 'public', 'navigator.html'));
+});
+
+
+app.get('/onchain', (req, res) => {
+  if (!tempSession) {
+    return res.status(401).send("❌ Unauthorized. Please sign in first.");
+  }
+  res.sendFile(path.join(__dirname, 'public', 'onchain.html'));
+});
+
+app.post('/signup', async (req, res) => {
+  const { name, surname, username, password } = req.body;
+  try {
+    const existingUser = await User.findOne({ username });
+    if (existingUser) {
+      return res.status(400).send("⚠️ User already exists.");
+    }
+
+    const newUser = new User({ name, surname, username, password });
+    await newUser.save();
+    res.redirect('/signin.html');
+
+  } catch (err) {
+    console.error(err);
+    res.status(500).send(" Error registering user.");
+  }
+});
+
+app.post('/signin', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    const user = await User.findOne({ username, password });
+    if (!user) {
+      return res.status(401).send("Invalid credentials.");
+    }
+
+    tempSession = {
+      username: user.username,
+      signedInAt: new Date().toLocaleString()
+    };
+
+    res.send("Signed in successfully!");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error during sign-in.");
+  }
+});
+
+app.get('/session', (req, res) => {
+  if (tempSession) {
+    res.json(tempSession);
+  } else {
+    res.status(401).send("❌ No active session.");
+  }
+});
+
+
+
+
+app.post('/post', async (req, res) => {
+  const { name, email, idea, info } = req.body;
+  try {
+    const newStartup = new Startup({ name, email, idea, info });
+    await newStartup.save();
+    console.log(newStartup);
+    res.send("Startup registration successful!");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Failed to register startup.");
+  }
+});
+
+app.post('/filter-startups', (req, res) => {
+  const { funding, domains } = req.body;
+
+  fs.readFile(path.join(__dirname, 'startups.json'), 'utf8', (err, data) => {
+    if (err) {
+      console.error("Error reading startups.json:", err);
+      return res.status(500).send("Server error");
+    }
+
+    try {
+      const startups = JSON.parse(data);
+      const filtered = startups.filter(s =>
+        domains.includes(s.domain.toLowerCase()) && parseInt(s.minFunding) <= funding
+      );
+
+      res.json(filtered);
+    } catch (e) {
+      console.error("JSON parse error:", e);
+      res.status(500).send("Invalid startup data");
+    }
+  });
+});
+
+app.post('/startups', (req, res) => {
+  const { funding, domains } = req.body;
+
+  fs.readFile(path.join(__dirname, 'startups.json'), 'utf8', (err, data) => {
+    if (err) return res.status(500).send('Error reading file');
+
+    const startups = JSON.parse(data);
+    const matches = startups.filter(startup => 
+      domains.includes(startup.domain) && funding >= startup.funding
+    );
+
+    res.json(matches);
+  });
+});
+
+app.listen(port, () => {
+  console.log(` Unified server running at http://localhost:${port}`);
+});

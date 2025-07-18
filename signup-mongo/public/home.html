@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <div class="nav">
+     <ul>
+      <li id="signin" onclick="window.location.href = 'signin.html'">Sign in</li>
+      <li id="resource" onclick="window.location.href='home.html'">Resource</li>
+      <li id="upspark"onclick="window.location.href='home.html'">UPSPARK</li>
+      <li id="aboutus">About us</li>
+      <li id="signup" onclick="window.location.href = 'signup.html'">Sign up</li>
+     </ul>
+  </div>
+    <div class="front">
+      <b><div class="lets">Let's Make Your Future<br> 
+        <span class="bright">Bright</span>
+      </div></b>
+    </div>
+  <div class="start">
+    <a href="#" onclick="gotoProtected('NAVIGATOR.HTML')">STARTUP NAVIGATOR</a>
+    <a href="#" onclick="gotoProtected('register.html')">STARTUP REGISTRATION</a>
+  </div>
+  <div class="whatsapp">
+        <a href="https://wa.me/8767779190"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" width="5%">
+        </a>
+        <div class="what">chat</div>
+    
+<script >
+
+    function gotoProtected(page) {
+      const user = localStorage.getItem('loggedInUser');
+      if (user) {
+        window.location.href = page;
+      } else {
+        alert("⚠️ Please sign in first!");
+        window.location.href = "signin.html";
+      }
+    }
+  
+</script>
+</body>
+</html>
+
+

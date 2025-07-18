@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartupNavigator Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="REGISTRATION.CSS">
+</head>
+<body>
+    <div class="nav">
+        <ul>
+         <li id="signin"  onclick="window.location.href = 'signin.html'">Sign in</li>
+         <li id="resource" onclick="window.location.href='home.html'">Resource</li>
+         <li id="upspark" onclick="window.location.href='home.html'">UPSPARK</li>
+         <li id="aboutus">About us</li>
+         <li id="signup" onclick="window.location.href = 'signup.html'">Sign up</li>
+        </ul>
+     </div>
+    <div class="container">
+        <!-- <h2>Create Your StartupNavigator Account</h2> -->
+        <b><p class="description">Start your entrepreneurial journey with personalized guidance and startup ideas tailored to you.</p>
+        </b>
+        <form action="/post" method="POST">
+             <label>Full Name</label>
+            <input name="name" type="text" placeholder="Enter your first name" required>
+
+            <label>Email address</label>
+            <input name="email" type="email" placeholder="Enter your email" required>
+
+            <label>Startup Name</label>
+            <input name="idea" type="text" placeholder="Enter your name" required>
+
+            <label>Describe more about startup</label>
+            <input name="info" type="text" placeholder="give some info" required>
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+    <script>
+
+  window.onload = function () {
+    const user = localStorage.getItem('loggedInUser');
+    if (!user) {
+      alert(" You must be signed in to access this page.");
+      window.location.href = 'signin.html';
+    }
+  };
+</script>
+
+
+</body>
+</html>

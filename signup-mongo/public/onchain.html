@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>On-Chain Registration</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <link rel="stylesheet" href="onchain.css">
+  
+</head>
+<body>
+    <div class="nav">
+     <ul>
+      <li id="signin" onclick="window.location.href = 'signin.html'">Sign in</li>
+      <li id="resource" onclick="window.location.href='home.html'">Resource</li>
+      <li id="upspark"onclick="window.location.href='home.html'">UPSPARK</li>
+      <li id="aboutus">About us</li>
+      <li id="signup" onclick="window.location.href = 'signup.html'">Sign up</li>
+     </ul>
+  </div><br><br><br>
+  <div id="container">
+    <header class="idea-box">
+    <h2>On-Chain Idea Registration</h2>
+    <p><strong>Connected Wallet:</strong> <span id="walletAddress">Not connected</span></p>
+
+    <input type="text" id="title" placeholder="Idea Title" />
+    <textarea id="description" placeholder="Idea Description"></textarea>
+    <button onclick="registerIdea()">Submit Idea (0.001 ETH)</button>
+  </div>
+   </header>
+  <script type="module">
+    const contractAddress = "0x574F9B375d1002136cD7845BC9371976EDA113B4"; // Replace this
+
+  let contract, signer;
+
+  async function connectWallet() {
+    if (!window.ethereum) {
+      alert("Please install MetaMask.");
+      return;
+    }
+
+    try {
+      await window.ethereum.request({ method: "eth_requestAccounts" });
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      signer = provider.getSigner();
+      const address = await signer.getAddress();
+      document.getElementById("walletAddress").innerText = address;
+
+      const response = await fetch("/contracts/IdeaRegistry.json");
+      const abiJson = await response.json();
+
+      contract = new ethers.Contract(contractAddress, abiJson.abi, signer);
+      console.log("✅ Wallet connected and contract loaded.");
+    } catch (err) {
+      console.error("MetaMask connection error:", err);
+      alert("❌ Failed to connect MetaMask.");
+    }
+  }
+
+  async function registerIdea() {
+    const ideaTitle = document.getElementById("title").value;
+    const ideaDescription = document.getElementById("description").value;
+
+    if (!contract || !ideaTitle || !ideaDescription) {
+      alert("Please complete the form and connect MetaMask.");
+      return;
+    }
+
+    try {
+      const tx = await contract.registerIdea(ideaTitle, ideaDescription, {
+        value: ethers.utils.parseEther("0.001"),
+      });
+      await tx.wait();
+      alert("✅ Idea registered successfully!");
+    } catch (err) {
+      console.error(err);
+      alert("❌ Transaction failed.");
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", connectWallet);
+  window.registerIdea = registerIdea;
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Sign Up</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <div class="nav">
+    <ul>
+      <li id="signin"  onclick="window.location.href = 'signin.html'">Sign in</li>
+      <li id="resource" onclick="window.location.href='home.html'">Resource</li>
+      <li id="upspark" onclick="window.location.href='home.html'">UPSPARK</li>
+      <li id="aboutus">About us</li>
+      <li><a href="signup.html" id="signup">Sign up</a></li>
+    </ul>
+  </div>
+
+  <!-- Sign Up Form -->
+  <div class="glass-wrapper">
+    <div class="glass">
+      <h2 class="title"><b>Sign Up</b></h2>
+      <form action="/signup" method="POST">
+        <div class="input-box">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="Enter Name" required /><br>
+          <label>Surname</label>
+          <input type="text" name="surname" placeholder="Enter Surname" required /><br>
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Enter username" required />
+        </div><br>
+        <div class="input-box">
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Enter password" required />
+        </div><br>
+        <button type="submit" class="submit-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

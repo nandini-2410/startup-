@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+ 
+  min-height: 100vh;
+}
+
+/* Navbar */
+.nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 15px 0;
+  background: linear-gradient(to bottom, rgba(1, 1, 51), #212146);
+  font-size: 30px;
+  color: skyblue;
+  text-shadow: 5px 1px 2px rgb(1, 20, 36);
+}
+
+.nav ul li {
+  margin: 0 40px;
+  cursor: pointer;
+}
+
+#upspark {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* Glass Effect Container */
+.glass-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+  color: #212146;
+
+}
+
+/* Glass Box */
+.glass-box {
+  width: 500px;
+  height: 600px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto; /* Allow scrolling if needed */
+}
+
+.glass-box h3 {
+  font-size: 20px;
+  color: #212146;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  flex-grow: 1;
+}
+
+.glass-box h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #00ffe1;
+}
+
+.glass-box button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2264ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.glass-box button:hover {
+  background-color: #0044cc;
+}
