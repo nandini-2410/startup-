@@ -2,13 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
-const fs =require('fs')
+const fs = require("fs");
+const csv = require("csv-parser");
 const app = express();
 const port = 3001;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));                                                                                                                
+app.use(express.urlencoded({ extended: true }));
 app.use('/contracts', express.static(path.join(__dirname, 'public/contracts')));
 
 app.get('/register', (req, res) => {
@@ -136,42 +137,19 @@ app.post('/post', async (req, res) => {
   }
 });
 
-app.post('/filter-startups', (req, res) => {
-  const { funding, domains } = req.body;
+app.get("/get-startups", (req, res) => {
+  const results = [];
 
-  fs.readFile(path.join(__dirname, 'startups.json'), 'utf8', (err, data) => {
-    if (err) {
-      console.error("Error reading startups.json:", err);
-      return res.status(500).send("Server error");
-    }
-
-    try {
-      const startups = JSON.parse(data);
-      const filtered = startups.filter(s =>
-        domains.includes(s.domain.toLowerCase()) && parseInt(s.minFunding) <= funding
-      );
-
-      res.json(filtered);
-    } catch (e) {
-      console.error("JSON parse error:", e);
-      res.status(500).send("Invalid startup data");
-    }
-  });
-});
-
-app.post('/startups', (req, res) => {
-  const { funding, domains } = req.body;
-
-  fs.readFile(path.join(__dirname, 'startups.json'), 'utf8', (err, data) => {
-    if (err) return res.status(500).send('Error reading file');
-
-    const startups = JSON.parse(data);
-    const matches = startups.filter(startup => 
-      domains.includes(startup.domain) && funding >= startup.funding
-    );
-
-    res.json(matches);
-  });
+  fs.createReadStream("startups.csv")
+    .pipe(csv())
+    .on("data", (data) => results.push(data))
+    .on("end", () => {
+      res.json(results);
+    })
+    .on("error", (err) => {
+      console.error("CSV Read Error:", err);
+      res.status(500).send("Error reading CSV file");
+    });
 });
 
 app.listen(port, () => {
