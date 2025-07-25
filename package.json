@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
-    "hardhat": "^2.26.0"
+    "hardhat": "^2.26.1"
   },
   "name": "2nd-asep",
   "version": "1.0.0",

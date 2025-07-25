@@ -1,0 +1,201 @@
+startupId,name,description,domain,startYear,location,contact,minFunding,growth_year1,growth_year2,growth_year3
+1,SunPower Solutions,Develops innovative solar panel technologies for residential and commercial use.,clean energy,2018,"San Francisco, CA",sunpowersolutions@gmail.com,500000,1.25,1.6,2.1
+2,NutriBowl,Healthy meal kit delivery service focusing on sustainable and organic ingredients.,food,2020,"New York, NY",nutribowl@gmail.com,150000,1.8,2.3,1.95
+3,CoinFlow,Blockchain-based platform for secure and transparent peer-to-peer lending.,fintech,2019,"London, UK",coinflow@gmail.com,750000,1.4,1.75,2.5
+4,AgriSense,"IoT solutions for precision agriculture, optimizing crop yield and resource management.",agritech,2021,"Des Moines, IA",agrisense@gmail.com,300000,1.9,2.15,1.8
+5,MediGenie,AI-powered diagnostic tools for early detection of chronic diseases.,healthtech,2017,"Boston, MA",medigenie@gmail.com,100000,1.3,1.65,2
+6,StyleHub,Personalized online fashion marketplace using AI to recommend outfits.,e-commerce,2019,"Los Angeles, CA",stylehub@gmail.com,500000,1.7,2.2,2.4
+7,Wanderlust AI,AI-driven personalized travel planning and booking platform.,travel,2020,"Berlin, Germany",wanderlustai@gmail.com,800000,1.5,1.9,2.1
+8,Cognito AI,Develops natural language processing (NLP) solutions for enterprise customer service.,ai,2018,"Seattle, WA",cognitoai@gmail.com,120000,1.6,2,2.3
+9,LearnSmart,Adaptive learning platform using AI to tailor educational content to individual students.,edtech,2019,"Austin, TX",learnsmart@gmail.com,400000,1.85,2.1,2.25
+10,EcoCharge,Network of smart EV charging stations powered by renewable energy.,clean energy,2021,"Oslo, Norway",ecocharge@gmail.com,900000,1.7,2.05,2.4
+11,FarmFresh Direct,Platform connecting local farmers directly with consumers for fresh produce delivery.,food,2020,"Portland, OR",farmfreshdirect@gmail.com,200000,2.1,2.5,2.2
+12,Lendify,AI-powered credit scoring and micro-lending platform for underserved populations.,fintech,2018,"Bangalore, India",lendify@gmail.com,600000,1.55,1.95,2.35
+13,CropGuardian,Drone-based imagery and AI analysis for early detection of crop diseases and pests.,agritech,2022,"Saskatoon, Canada",cropguardian@gmail.com,180000,1.65,1.8,2
+14,HealthTracker,Wearable health monitoring devices integrated with a personalized wellness app.,healthtech,2019,"Seoul, South Korea",healthtracker@gmail.com,900000,1.45,1.7,1.9
+15,CraftyGoods,"Online marketplace for handcrafted artisan products, supporting small businesses.",e-commerce,2021,"Denver, CO",craftygoods@gmail.com,150000,2,2.3,2.1
+16,RouteFinder,AI-optimized logistics and route planning software for delivery services.,travel,2020,Singapore,routefinder@gmail.com,500000,1.6,1.9,2.2
+17,Vision AI,Computer vision solutions for industrial automation and quality control.,ai,2017,"Shenzhen, China",visionai@gmail.com,100000,1.35,1.65,1.95
+18,SkillUp Online,Online platform offering vocational training and certification courses with job placement assistance.,edtech,2019,"Toronto, Canada",skilluponline@gmail.com,600000,1.9,2.2,2.5
+19,AquaClean Tech,Sustainable water purification systems for rural communities.,clean energy,2022,"Nairobi, Kenya",aquacleantech@gmail.com,700000,1.75,2.1,2.3
+20,Vegan Bites,Plant-based food products and meal solutions for health-conscious consumers.,food,2021,"Berlin, Germany",veganbites@gmail.com,800000,2.2,2.6,2.4
+21,EquityFlow,Robo-advisor platform for personalized investment strategies and portfolio management.,fintech,2019,"Sydney, Australia",equityflow@gmail.com,400000,1.3,1.6,1.9
+22,SoilGenius,AI-driven soil analysis and nutrient recommendation system for optimizing crop yields.,agritech,2020,"Champaign, IL",soilgenius@gmail.com,550000,1.8,2,1.7
+23,TeleMed Connect,Telemedicine platform connecting patients with specialist doctors for remote consultations.,healthtech,2018,"Mumbai, India",telemedconnect@gmail.com,900000,1.5,1.8,2.1
+24,GadgetVerse,Online store for cutting-edge electronics and smart home devices.,e-commerce,2020,"Tokyo, Japan",gadgetverse@gmail.com,650000,1.7,2.1,2.3
+25,EcoTours,Sustainable and eco-friendly travel experiences focusing on nature and cultural immersion.,travel,2021,Costa Rica,ecotours@gmail.com,450000,1.8,2.2,2
+26,DataBrain AI,AI-powered data analytics platform for business intelligence and predictive modeling.,ai,2019,"London, UK",databrainai@gmail.com,700000,1.5,1.8,2.1
+27,CodeAcademy Pro,Online coding bootcamps and workshops with a focus on job-ready skills.,edtech,2018,"San Francisco, CA",codeacademypro@gmail.com,450000,1.75,2.05,2.35
+28,WindHarvest Tech,Develops small-scale wind turbines for urban and residential power generation.,clean energy,2020,"Copenhagen, Denmark",windharvesttech@gmail.com,600000,1.6,1.9,2.2
+29,Gourmet Garden,Subscription box service delivering exotic and gourmet ingredients for home cooking.,food,2021,"Paris, France",gourmetgarden@gmail.com,300000,1.9,2.2,2
+30,PaySmart,Mobile payment gateway for small and medium-sized businesses.,fintech,2020,"Jakarta, Indonesia",paysmart@gmail.com,400000,1.7,2.1,2.4
+31,FarmConnect,"Online platform connecting farmers with buyers, streamlining agricultural supply chains.",agritech,2019,"SÃ£o Paulo, Brazil",farmconnect@gmail.com,700000,1.5,1.75,1.9
+32,MindWell AI,AI-powered mental health support app offering personalized therapy and mindfulness exercises.,healthtech,2021,"Vancouver, Canada",mindwellai@gmail.com,800000,1.9,2.3,2.5
+33,HomeStyle Decor,Online retail specializing in sustainable and ethically sourced home decor.,e-commerce,2019,"Stockholm, Sweden",homestyledecor@gmail.com,350000,1.8,2,2.2
+34,AdventureSeeker,Platform for booking extreme sports and adventure travel experiences worldwide.,travel,2020,"Queenstown, New Zealand",adventureseeker@gmail.com,950000,1.4,1.7,2
+35,RoboOps AI,AI-powered robotic process automation (RPA) solutions for various industries.,ai,2018,"Munich, Germany",roboopsai@gmail.com,600000,1.45,1.75,2.05
+36,FutureLearn,Online learning platform offering accredited courses from top universities globally.,edtech,2017,"Cambridge, UK",futurelearn@gmail.com,400000,1.3,1.6,1.9
+37,HydroPower Innovate,Develops micro-hydroelectric systems for off-grid power generation in remote areas.,clean energy,2022,"Kathmandu, Nepal",hydropowerinnovate@gmail.com,900000,1.8,2.15,2.3
+38,GreenPlate Meals,"Subscription service delivering plant-based, ready-to-eat meals.",food,2020,"Sydney, Australia",greenplatemeals@gmail.com,300000,2,2.4,2.1
+39,InsurTech Innovations,Uses AI and blockchain to streamline insurance claims processing and fraud detection.,fintech,2021,"Zurich, Switzerland",insurtechinnovations@gmail.com,900000,1.6,1.9,2.2
+40,SmartFarm Robotics,"Develops autonomous robots for planting, harvesting, and pest control in large farms.",agritech,2019,"Silicon Valley, CA",smartfarmrobotics@gmail.com,500000,1.4,1.7,2
+41,GeneSense Diagnostics,AI-powered genetic sequencing and analysis for personalized medicine and disease prevention.,healthtech,2017,"Cambridge, MA",genesensediagnostics@gmail.com,800000,1.2,1.5,1.8
+42,LuxuryLuxe,High-end online boutique for luxury fashion and accessories.,e-commerce,2018,"Milan, Italy",luxuryluxe@gmail.com,450000,1.5,1.8,2
+43,GlobeTrek VR,Virtual reality travel experiences for exploring global destinations from home.,travel,2022,"Seoul, South Korea",globetrekvr@gmail.com,700000,1.9,2.2,2.4
+44,PredictiveAI,Develops predictive analytics solutions for financial markets and risk assessment.,ai,2020,"New York, NY",predictiveai@gmail.com,500000,1.6,1.9,2.2
+45,EduQuest,"Gamified learning platform for K-12 students, making education engaging and fun.",edtech,2021,"Helsinki, Finland",eduquest@gmail.com,900000,2.1,2.4,2.6
+46,OceanClean Solutions,Develops technologies for plastic removal and pollution control in marine environments.,clean energy,2019,"Amsterdam, Netherlands",oceancleansolutions@gmail.com,800000,1.4,1.7,2
+47,ProteinPulse,Innovative plant-based protein supplements for athletes and health enthusiasts.,food,2022,"Boulder, CO",proteinpulse@gmail.com,700000,2.3,2.7,2.5
+48,WealthSphere,Digital wealth management platform offering personalized financial planning and investment advice.,fintech,2018,Singapore,wealthsphere@gmail.com,500000,1.3,1.6,1.9
+49,Vertical Harvest,"Indoor vertical farming solutions for urban areas, providing fresh produce year-round.",agritech,2020,"Chicago, IL",verticalharvest@gmail.com,900000,1.7,2,2.3
+50,ElderCare AI,AI-powered monitoring and support systems for elderly individuals living independently.,healthtech,2021,"Tokyo, Japan",eldercareai@gmail.com,600000,1.8,2.1,2.4
+51,PetPal Palace,"Online store for premium pet food, toys, and accessories.",e-commerce,2020,"Sydney, Australia",petpalpalace@gmail.com,950000,1.9,2.2,2
+52,LocalStaycations,Platform for discovering unique local experiences and short-term rentals.,travel,2021,"Edinburgh, Scotland",localstaycations@gmail.com,700000,2,2.3,2.1
+53,SpeechSense AI,AI-powered speech recognition and natural language understanding for call centers.,ai,2019,"Dublin, Ireland",speechsenseai@gmail.com,600000,1.55,1.85,2.15
+54,QuantumLearn,Online courses and simulations for quantum computing and advanced tech skills.,edtech,2022,"Waterloo, Canada",quantumlearn@gmail.com,300000,1.7,2,2.3
+55,GeoThermal Innovations,Develops advanced geothermal energy systems for industrial heating and cooling.,clean energy,2018,"Reykjavik, Iceland",geothermalinnovations@gmail.com,800000,1.35,1.65,1.95
+56,CuisineCloud,Cloud kitchen platform offering various cuisines for delivery-only restaurants.,food,2021,"London, UK",cuisinecloud@gmail.com,700000,2.1,2.5,2.3
+57,MicroLend Pro,Platform providing micro-loans to small businesses and entrepreneurs in developing countries.,fintech,2019,"Nairobi, Kenya",microlendpro@gmail.com,400000,1.6,1.9,2.2
+58,AquaFarm Tech,Sustainable aquaculture solutions for fish and seafood farming with minimal environmental impact.,agritech,2022,"Bergen, Norway",aquafarmtech@gmail.com,800000,1.8,2.1,2.4
+59,Precision Health,Personalized health and nutrition plans based on individual genetic and lifestyle data.,healthtech,2020,"San Diego, CA",precisionhealth@gmail.com,700000,1.5,1.8,2.1
+60,Artisanal Market,"Online platform for unique, handmade crafts and artistic creations.",e-commerce,2021,"Santa Fe, NM",artisanalmarket@gmail.com,600000,2.1,2.4,2.2
+61,RoadTrip Planner,"AI-powered tool for optimizing road trip itineraries, suggesting points of interest and accommodations.",travel,2020,"Nashville, TN",roadtripplanner@gmail.com,350000,1.6,1.9,2.2
+62,CyberGuard AI,AI-driven cybersecurity solutions for detecting and preventing advanced cyber threats.,ai,2018,"Tel Aviv, Israel",cyberguardai@gmail.com,800000,1.4,1.7,2
+63,TeachSmart AI,"AI assistants for teachers, automating grading and providing personalized feedback.",edtech,2021,"Palo Alto, CA",teachsmartai@gmail.com,400000,1.85,2.15,2.45
+64,BioFuel Innovations,Research and development of advanced biofuels from sustainable sources.,clean energy,2017,"SÃ£o Paulo, Brazil",biofuelinnovations@gmail.com,350000,1.2,1.5,1.8
+65,FoodWaste Fighters,Platform connecting restaurants and grocery stores with charities to reduce food waste.,food,2020,"Vancouver, Canada",foodwastefighters@gmail.com,900000,2.2,2.6,2.4
+66,CryptoLend,Decentralized lending platform using cryptocurrency as collateral.,fintech,2021,"Zug, Switzerland",cryptolend@gmail.com,600000,1.5,1.8,2.1
+67,DroneFarm Solutions,Uses drones for efficient monitoring and spraying in large agricultural fields.,agritech,2019,"Wageningen, Netherlands",dronefarmsolutions@gmail.com,300000,1.6,1.9,2.2
+68,MedBotics,Develops surgical robots for minimally invasive procedures.,healthtech,2017,"Boston, MA",medbotics@gmail.com,700000,1.15,1.45,1.75
+69,ThriftThread,"Online marketplace for pre-owned clothing and accessories, promoting sustainable fashion.",e-commerce,2020,"Berlin, Germany",thriftthread@gmail.com,600000,2,2.3,2.1
+70,SpaceTrek Tourism,Offers sub-orbital space tourism experiences and stratospheric balloon flights.,travel,2022,"Cape Canaveral, FL",spacetrektourism@gmail.com,400000,1.2,1.5,1.8
+71,Emotional AI,AI-powered emotion recognition technology for improved human-computer interaction.,ai,2021,"Kyoto, Japan",emotionalai@gmail.com,500000,1.7,2,2.3
+72,VR Learnings,Virtual reality educational modules for immersive learning experiences in various subjects.,edtech,2020,"Barcelona, Spain",vrlearnings@gmail.com,800000,1.9,2.2,2.5
+73,SolarRoof Pros,Offers integrated solar roof tile solutions for residential and commercial buildings.,clean energy,2019,"Phoenix, AZ",solarroofpros@gmail.com,300000,1.5,1.8,2.1
+74,Artisan Bakery Online,Online shop delivering freshly baked artisan bread and pastries nationwide.,food,2021,"San Francisco, CA",artisanbakeryonline@gmail.com,700000,2,2.3,2.1
+75,PropTech Innovate,Uses AI and blockchain to streamline real estate transactions and property management.,fintech,2020,"Dubai, UAE",proptechinnovate@gmail.com,800000,1.7,2,2.3
+76,AgriForecast AI,AI-powered weather and climate prediction for optimizing agricultural planning.,agritech,2021,"Canberra, Australia",agriforecastai@gmail.com,600000,1.9,2.2,2.5
+77,CareBotics,Develops robotic assistants for home care and companionship for seniors.,healthtech,2019,"Pittsburgh, PA",carebotics@gmail.com,650000,1.4,1.7,2
+78,Artify Digital,"Online marketplace for digital art and NFTs, connecting artists with collectors.",e-commerce,2022,"Berlin, Germany",artifydigital@gmail.com,900000,2,2.3,2.5
+79,CruiseConnect,Platform for booking luxury cruise vacations and curated cruise experiences.,travel,2020,"Miami, FL",cruiseconnect@gmail.com,700000,1.5,1.8,2.1
+80,EdgeAI Solutions,"Develops AI models optimized for edge devices, enabling real-time processing.",ai,2018,"San Jose, CA",edgeaisolutions@gmail.com,400000,1.3,1.6,1.9
+81,CareerBridge Ed,Online platform connecting students with internships and entry-level job opportunities.,edtech,2019,"New York, NY",careerbridgeed@gmail.com,900000,1.7,2,2.3
+82,Waste2Energy Tech,Converts municipal and industrial waste into clean energy using advanced pyrolysis.,clean energy,2020,"Copenhagen, Denmark",waste2energytech@gmail.com,500000,1.4,1.7,2
+83,CulturedMeat Co.,Produces sustainable and ethical cultivated meat products in a lab environment.,food,2021,"San Francisco, CA",culturedmeatco.@gmail.com,800000,2.5,3,2.8
+84,InvestWise AI,AI-driven investment research and portfolio optimization tools for institutional investors.,fintech,2019,"London, UK",investwiseai@gmail.com,900000,1.3,1.6,1.9
+85,Precision Livestock,"IoT and AI solutions for monitoring livestock health, behavior, and optimizing farm management.",agritech,2022,"Dublin, Ireland",precisionlivestock@gmail.com,600000,1.8,2.1,2.4
+86,Digital Therapeutics,Prescription digital therapies for managing chronic conditions and mental health.,healthtech,2018,"Tel Aviv, Israel",digitaltherapeutics@gmail.com,900000,1.4,1.7,2
+87,VintageFinds,"Online marketplace for authentic vintage clothing, furniture, and collectibles.",e-commerce,2021,"Paris, France",vintagefinds@gmail.com,700000,1.9,2.2,2
+88,Eco-Travel Adventures,Specializes in responsible and environmentally conscious travel tours to remote destinations.,travel,2019,"Reykjavik, Iceland",eco-traveladventures@gmail.com,400000,1.5,1.8,2.1
+89,AI for Drug Discovery,Uses AI and machine learning to accelerate drug discovery and development processes.,ai,2017,"Boston, MA",aifordrugdiscovery@gmail.com,150000,1.25,1.55,1.85
+90,HomeSchool Hub,"Comprehensive online platform providing curriculum, resources, and community for homeschooling families.",edtech,2020,"Salt Lake City, UT",homeschoolhub@gmail.com,700000,2,2.3,2.6
+91,WavePower Energy,Develops innovative technologies to harness wave energy for electricity generation.,clean energy,2021,"Lisbon, Portugal",wavepowerenergy@gmail.com,100000,1.6,1.9,2.2
+92,LocalRoots Produce,"Subscription service delivering fresh, locally sourced produce directly from farms.",food,2020,"Detroit, MI",localrootsproduce@gmail.com,450000,2.1,2.5,2.3
+93,GreenInvest,Investment platform focused on sustainable and ethical investments in clean energy and eco-friendly companies.,fintech,2019,"Amsterdam, Netherlands",greeninvest@gmail.com,110000,1.7,2,2.3
+94,AquaGrowth Systems,Designs and installs hydroponic and aquaponic systems for sustainable food production.,agritech,2018,"Vancouver, Canada",aquagrowthsystems@gmail.com,300000,1.5,1.8,2.1
+95,SleepSense Tech,Smart sleep tracking devices and AI-powered personalized sleep improvement programs.,healthtech,2021,"Zurich, Switzerland",sleepsensetech@gmail.com,600000,1.9,2.2,2.5
+96,LuxuryGoods Exchange,Online platform for buying and selling authenticated pre-owned luxury goods.,e-commerce,2019,"New York, NY",luxurygoodsexchange@gmail.com,200000,1.6,1.9,2.2
+97,AdventureConnect,Social platform for connecting travelers with local guides and unique adventure activities.,travel,2020,"Bangkok, Thailand",adventureconnect@gmail.com,500000,1.8,2.1,2.4
+98,CreativeAI Studio,"AI-powered tools for graphic design, content creation, and artistic expression.",ai,2022,"Los Angeles, CA",creativeaistudio@gmail.com,300000,1.9,2.2,2.5
+99,EduGaming Labs,Develops educational video games and interactive simulations for K-12 and higher education.,edtech,2021,"MontrÃ©al, Canada",edugaminglabs@gmail.com,120000,2,2.3,2.6
+100,RenewableHeat Solutions,Provides efficient and environmentally friendly heating solutions using renewable energy sources.,clean energy,2020,"Stockholm, Sweden",renewableheatsolutions@gmail.com,600000,1.5,1.8,2.1
+101,UrbanFarm Co.,Designs and installs urban farming systems for communities and residential buildings.,agritech,2019,"Brooklyn, NY",urbanfarmco.@gmail.com,600000,1.7,2,2.3
+102,MindBody AI,"AI-powered personalized wellness coaching combining fitness, nutrition, and mental well-being.",healthtech,2021,"Sydney, Australia",mindbodyai@gmail.com,600000,1.9,2.2,2.5
+103,SustainableStyle,E-commerce platform for eco-friendly and ethically produced fashion and accessories.,e-commerce,2020,"London, UK",sustainablestyle@gmail.com,600000,1.8,2.1,2.3
+104,Heritage Tours,Specialized travel agency offering immersive historical and cultural heritage tours.,travel,2018,"Rome, Italy",heritagetours@gmail.com,900000,1.4,1.7,2
+105,NeuroSense AI,Develops AI solutions for brain-computer interfaces and neurorehabilitation.,ai,2021,"Zurich, Switzerland",neurosenseai@gmail.com,800000,1.6,1.9,2.2
+106,FutureSkills Academy,"Online academy offering courses on emerging technologies like AI, blockchain, and robotics.",edtech,2019,Singapore,futureskillsacademy@gmail.com,900000,1.75,2.05,2.35
+107,SmartGrid Dynamics,Software and hardware solutions for optimizing smart grid efficiency and renewable energy integration.,clean energy,2018,"Boulder, CO",smartgriddynamics@gmail.com,450000,1.3,1.6,1.9
+108,Global Flavors Kitchen,Online platform delivering gourmet meal kits featuring authentic recipes from around the world.,food,2020,"London, UK",globalflavorskitchen@gmail.com,700000,1.9,2.2,2
+109,FinLearn Academy,Online educational platform offering courses and certifications in personal finance and investment.,fintech,2021,"New York, NY",finlearnacademy@gmail.com,600000,2,2.3,2.6
+110,HortiSense Tech,Smart sensor technology for monitoring and optimizing conditions in greenhouses and vertical farms.,agritech,2020,"Amsterdam, Netherlands",hortisensetech@gmail.com,150000,1.8,2.1,2.4
+111,Genomic Health AI,AI-powered analysis of genomic data for personalized health interventions and disease risk assessment.,healthtech,2019,"San Francisco, CA",genomichealthai@gmail.com,800000,1.3,1.6,1.9
+112,BookNook Online,"E-commerce store specializing in rare and collectible books, with a focus on sustainable sourcing.",e-commerce,2021,"Seattle, WA",booknookonline@gmail.com,300000,2.1,2.4,2.2
+113,RemoteWork Retreats,"Organizes curated travel experiences for remote workers, combining work and exploration.",travel,2022,"Lisbon, Portugal",remoteworkretreats@gmail.com,120000,1.9,2.2,2.4
+114,VoiceBot AI,Develops advanced AI-powered voice assistants for customer service and personal productivity.,ai,2020,"Tel Aviv, Israel",voicebotai@gmail.com,700000,1.5,1.8,2.1
+115,Skillify Global,Online platform for micro-learning and skill development in various professional fields.,edtech,2020,"Bengaluru, India",skillifyglobal@gmail.com,900000,1.8,2.1,2.4
+116,HydrogenFuel Cell,Develops efficient and cost-effective hydrogen fuel cell technology for transportation and power.,clean energy,2019,"Munich, Germany",hydrogenfuelcell@gmail.com,500000,1.2,1.5,1.8
+117,PlantPure Foods,"Offers a range of organic, plant-based food products for healthy living.",food,2021,"Los Angeles, CA",plantpurefoods@gmail.com,900000,2.2,2.6,2.4
+118,DeFi Solutions,"Provides decentralized finance (DeFi) solutions for lending, borrowing, and asset management.",fintech,2022,Singapore,defisolutions@gmail.com,700000,1.6,1.9,2.2
+119,SmartGreenhouses,Automated and IoT-enabled greenhouses for optimized crop growth and reduced resource consumption.,agritech,2020,"Kyoto, Japan",smartgreenhouses@gmail.com,900000,1.7,2,2.3
+120,BioPrint Med,Develops 3D bioprinting technology for creating human tissues and organs for medical research.,healthtech,2017,"San Diego, CA",bioprintmed@gmail.com,700000,1.1,1.4,1.7
+121,Global Crafts Online,"E-commerce platform showcasing handcrafted goods from artisans worldwide, promoting fair trade.",e-commerce,2021,"Marrakech, Morocco",globalcraftsonline@gmail.com,130000,1.9,2.2,2
+122,OffGrid Adventures,Offers curated off-grid travel experiences and eco-friendly glamping retreats.,travel,2020,"Salt Lake City, UT",offgridadventures@gmail.com,700000,1.6,1.9,2.2
+123,RoboAdvisor AI,AI-powered automated financial advisory services for retail investors.,fintech,2018,"Frankfurt, Germany",roboadvisorai@gmail.com,900000,1.45,1.75,2.05
+124,AgriTech Innovations,Develops cutting-edge technologies to enhance agricultural productivity and sustainability.,agritech,2017,"Silicon Valley, CA",agritechinnovations@gmail.com,700000,1.3,1.6,1.9
+125,HealthData AI,AI-powered platform for secure and anonymous health data analysis to improve public health outcomes.,healthtech,2020,"Seattle, WA",healthdataai@gmail.com,450000,1.5,1.8,2.1
+126,FashionForward Online,Trendy online fashion boutique offering the latest styles and personalized recommendations.,e-commerce,2019,"Paris, France",fashionforwardonline@gmail.com,600000,1.7,2,2.3
+127,ExploreVR,Offers virtual reality tours of famous landmarks and natural wonders worldwide.,travel,2022,"Amsterdam, Netherlands",explorevr@gmail.com,100000,2,2.3,2.5
+128,LanguageAI,AI-powered language translation and localization services for businesses.,ai,2019,"London, UK",languageai@gmail.com,800000,1.4,1.7,2
+129,SkillSphere,Peer-to-peer learning platform connecting individuals with experts for personalized coaching.,edtech,2021,"Berlin, Germany",skillsphere@gmail.com,300000,1.9,2.2,2.5
+130,GeoEnergy Systems,Provides sustainable energy solutions utilizing geothermal and bio-energy sources.,clean energy,2020,"Calgary, Canada",geoenergysystems@gmail.com,200000,1.5,1.8,2.1
+131,FlavorFusion Kitchen,Online platform for curated recipes and specialty ingredients from diverse culinary traditions.,food,2021,"New Orleans, LA",flavorfusionkitchen@gmail.com,900000,2,2.3,2.1
+132,CreditSense AI,AI-powered credit risk assessment and fraud detection for financial institutions.,fintech,2019,"New York, NY",creditsenseai@gmail.com,180000,1.4,1.7,2
+133,CropYield Predictor,AI-driven platform predicting crop yields based on satellite imagery and environmental data.,agritech,2022,"Iowa City, IA",cropyieldpredictor@gmail.com,200000,1.7,2,2.3
+134,TeleHealth Innovate,"Comprehensive telehealth platform offering virtual consultations, e-prescriptions, and remote monitoring.",healthtech,2018,"Toronto, Canada",telehealthinnovate@gmail.com,300000,1.5,1.8,2.1
+135,VintageTreasures,Curated online store for unique vintage home goods and collectibles.,e-commerce,2020,"Antwerp, Belgium",vintagetreasures@gmail.com,900000,1.8,2.1,1.9
+136,ExploreAfrica,Specializes in tailor-made luxury safari and cultural tours across Africa.,travel,2019,"Cape Town, South Africa",exploreafrica@gmail.com,400000,1.3,1.6,1.9
+137,GenerativeAI Labs,"Develops generative AI models for various applications, including art, music, and text generation.",ai,2022,"San Francisco, CA",generativeailabs@gmail.com,800000,1.8,2.1,2.4
+138,GlobalClassroom,Connects students and teachers worldwide for collaborative online learning projects.,edtech,2021,"Oslo, Norway",globalclassroom@gmail.com,400000,1.9,2.2,2.5
+139,E-Waste Recycling,Eco-friendly electronic waste recycling and precious metal recovery solutions.,clean energy,2020,"Berlin, Germany",e-wasterecycling@gmail.com,350000,1.6,1.9,2.2
+140,Sustainable Seafood Co.,Sources and delivers sustainably farmed and wild-caught seafood to restaurants and consumers.,food,2019,"Seattle, WA",sustainableseafoodco.@gmail.com,350000,2,2.3,2.1
+141,BlockchainFin Solutions,Provides blockchain-based solutions for secure financial record keeping and smart contracts.,fintech,2020,"Tallinn, Estonia",blockchainfinsolutions@gmail.com,600000,1.5,1.8,2.1
+142,PrecisionHarvest Robotics,Develops AI-powered robots for precise and automated harvesting of fruits and vegetables.,agritech,2021,"Davis, CA",precisionharvestrobotics@gmail.com,110000,1.9,2.2,2.5
+143,MentalWellness AI,AI-powered mobile app providing personalized tools and exercises for mental well-being.,healthtech,2020,"Austin, TX",mentalwellnessai@gmail.com,800000,1.7,2,2.3
+144,GamerGear Store,Online retailer specializing in high-performance gaming peripherals and accessories.,e-commerce,2019,"Seoul, South Korea",gamergearstore@gmail.com,400000,1.6,1.9,2.2
+145,IslandHopper Travel,Specializes in bespoke island-hopping tours and luxury beach vacations.,travel,2021,"MalÃ©, Maldives",islandhoppertravel@gmail.com,800000,1.8,2.1,2.4
+146,DataGuard AI,AI-powered data privacy and compliance solutions for businesses.,ai,2018,"Dublin, Ireland",dataguardai@gmail.com,700000,1.35,1.65,1.95
+147,EduBot Solutions,Develops AI-powered chatbots and virtual tutors for personalized learning support.,edtech,2022,"Boston, MA",edubotsolutions@gmail.com,450000,1.7,2,2.3
+148,CarbonCapture Tech,Develops advanced carbon capture and storage technologies for industrial emissions.,clean energy,2017,"Oslo, Norway",carboncapturetech@gmail.com,400000,1.1,1.4,1.7
+149,LocalBites Delivery,Food delivery service focused on supporting local independent restaurants.,food,2020,"Portland, OR",localbitesdelivery@gmail.com,600000,2.1,2.5,2.3
+150,InvoiceFlow AI,AI-powered invoice automation and expense management software for businesses.,fintech,2021,"Berlin, Germany",invoiceflowai@gmail.com,650000,1.7,2,2.3
+151,AgriWeather AI,AI-driven hyper-local weather forecasting for precision farming decisions.,agritech,2019,"Lincoln, NE",agriweatherai@gmail.com,700000,1.6,1.9,2.2
+152,ElderlyCare Robotics,"Develops assistive robots for elder care, focusing on mobility and daily living support.",healthtech,2018,"Kyoto, Japan",elderlycarerobotics@gmail.com,700000,1.4,1.7,2
+153,Handmade Haven,"Online marketplace for unique, handmade gifts and custom crafts.",e-commerce,2021,"Portland, OR",handmadehaven@gmail.com,150000,2,2.3,2.1
+154,UrbanExplorer Tours,Curated walking tours and cultural experiences in major cities worldwide.,travel,2020,"New York, NY",urbanexplorertours@gmail.com,900000,1.5,1.8,2.1
+155,AI Content Creator,"AI-powered platform for generating articles, marketing copy, and creative content.",ai,2022,"Austin, TX",aicontentcreator@gmail.com,100000,1.9,2.2,2.5
+156,Future Educators,Online professional development and certification programs for aspiring teachers.,edtech,2019,"London, UK",futureeducators@gmail.com,700000,1.7,2,2.3
+157,SmartHome Energy,Integrated smart home systems for optimizing energy consumption and generating solar power.,clean energy,2021,"San Jose, CA",smarthomeenergy@gmail.com,900000,1.6,1.9,2.2
+158,GlobalGourmet Grocer,Online grocery store specializing in imported and hard-to-find international ingredients.,food,2020,"New York, NY",globalgourmetgrocer@gmail.com,900000,1.9,2.2,2
+159,WealthTech Solutions,"Provides technology solutions for wealth managers, including portfolio analysis and client reporting.",fintech,2018,"Zurich, Switzerland",wealthtechsolutions@gmail.com,500000,1.3,1.6,1.9
+160,FarmManagement AI,"AI-powered software for comprehensive farm management, from planting to harvest.",agritech,2020,"Lincoln, NE",farmmanagementai@gmail.com,120000,1.8,2.1,2.4
+161,VirtualClinic Pro,Platform for healthcare providers to conduct virtual clinics and manage patient appointments.,healthtech,2021,"London, UK",virtualclinicpro@gmail.com,900000,1.9,2.2,2.5
+162,ActiveWear Online,E-commerce store specializing in sustainable and performance-driven activewear.,e-commerce,2019,"Boulder, CO",activewearonline@gmail.com,600000,1.7,2,2.3
+163,RailJourney Planner,Platform for planning and booking scenic train journeys and rail vacations worldwide.,travel,2020,"Zurich, Switzerland",railjourneyplanner@gmail.com,100000,1.5,1.8,2.1
+164,AI for Robotics,Develops AI algorithms and control systems for advanced industrial and service robots.,ai,2017,"Munich, Germany",aiforrobotics@gmail.com,800000,1.2,1.5,1.8
+165,GameBased Learning,Educational platform using video games and interactive simulations to teach complex subjects.,edtech,2021,"Austin, TX",gamebasedlearning@gmail.com,500000,2,2.3,2.6
+166,WindEnergy Solutions,"Provides end-to-end solutions for wind farm development, operation, and maintenance.",clean energy,2018,"Copenhagen, Denmark",windenergysolutions@gmail.com,600000,1.3,1.6,1.9
+167,HealthySnack Box,Subscription service delivering curated boxes of healthy and organic snacks.,food,2020,"San Francisco, CA",healthysnackbox@gmail.com,500000,2.2,2.6,2.4
+168,InvoiceAI,AI-driven platform for automated invoice processing and reconciliation.,fintech,2021,"Sydney, Australia",invoiceai@gmail.com,500000,1.8,2.1,2.4
+169,AquaDrone Farming,Uses underwater drones for monitoring and managing aquatic farms and aquaculture.,agritech,2022,"Bergen, Norway",aquadronefarming@gmail.com,500000,1.7,2,2.3
+170,BioTech Diagnostics,Develops advanced biotech diagnostic tools for rapid and accurate disease detection.,healthtech,2019,"Cambridge, MA",biotechdiagnostics@gmail.com,800000,1.25,1.55,1.85
+171,SustainableHome Goods,Online store offering a wide range of sustainable and eco-friendly home products.,e-commerce,2020,"Amsterdam, Netherlands",sustainablehomegoods@gmail.com,700000,1.9,2.2,2
+172,GlampingGetaways,Platform for booking luxury glamping experiences in unique natural settings.,travel,2021,"Asheville, NC",glampinggetaways@gmail.com,800000,1.8,2.1,2.4
+173,AI for Finance,"Provides AI-driven solutions for fraud detection, algorithmic trading, and risk management in finance.",fintech,2019,"London, UK",aiforfinance@gmail.com,800000,1.4,1.7,2
+174,RemoteLearning Hub,"All-in-one platform for remote learning, offering virtual classrooms and collaboration tools.",edtech,2020,"Toronto, Canada",remotelearninghub@gmail.com,500000,1.7,2,2.3
+175,GeoThermal Systems,Installs and maintains geothermal heating and cooling systems for homes and businesses.,clean energy,2019,"Denver, CO",geothermalsystems@gmail.com,400000,1.5,1.8,2.1
+176,FoodTech Innovations,Develops innovative food processing technologies and sustainable food ingredients.,food,2018,"San Francisco, CA",foodtechinnovations@gmail.com,800000,1.6,1.9,2.2
+177,InsurAI Solutions,"AI-driven platform for optimizing insurance operations, from underwriting to claims processing.",fintech,2020,"London, UK",insuraisolutions@gmail.com,700000,1.6,1.9,2.2
+178,PrecisionAqua Farming,High-tech aquaculture solutions for sustainable and efficient fish farming.,agritech,2021,"Oslo, Norway",precisionaquafarming@gmail.com,700000,1.8,2.1,2.4
+179,WearableHealth Tech,Develops advanced wearable devices for continuous health monitoring and personalized insights.,healthtech,2019,"Seoul, South Korea",wearablehealthtech@gmail.com,650000,1.5,1.8,2.1
+180,EcoFashion Collective,Online marketplace for ethically produced and sustainable fashion brands.,e-commerce,2020,"Copenhagen, Denmark",ecofashioncollective@gmail.com,400000,1.9,2.2,2
+181,CruiseLine Booking,Comprehensive online platform for booking cruises and personalized cruise experiences.,travel,2021,"Miami, FL",cruiselinebooking@gmail.com,300000,1.7,2,2.3
+182,AI for Healthcare,"Provides AI-powered solutions for medical imaging analysis, drug discovery, and personalized treatment.",ai,2018,"Boston, MA",aiforhealthcare@gmail.com,500000,1.3,1.6,1.9
+183,CodingKids Academy,Online coding courses and workshops designed specifically for children and teenagers.,edtech,2020,"San Francisco, CA",codingkidsacademy@gmail.com,800000,2,2.3,2.6
+184,SolarPanel Recycling,Develops advanced technologies for recycling and repurposing end-of-life solar panels.,clean energy,2022,"Dresden, Germany",solarpanelrecycling@gmail.com,200000,1.7,2,2.3
+185,SustainableEats,Meal kit delivery service focusing on zero-waste packaging and locally sourced ingredients.,food,2021,"Portland, OR",sustainableeats@gmail.com,400000,2.1,2.5,2.3
+186,DigitalWallet Plus,Enhanced digital wallet with integrated budgeting tools and cryptocurrency support.,fintech,2019,Singapore,digitalwalletplus@gmail.com,800000,1.6,1.9,2.2
+187,CropHealth AI,AI-powered mobile app for farmers to diagnose crop diseases and get immediate solutions.,agritech,2020,"Hyderabad, India",crophealthai@gmail.com,750000,1.8,2.1,2.4
+188,HomeCare Connect,Platform connecting families with vetted home care professionals for elderly and special needs individuals.,healthtech,2021,"Dallas, TX",homecareconnect@gmail.com,600000,1.9,2.2,2.5
+189,CuratedBooks Online,Online bookstore offering curated selections of books based on personalized recommendations.,e-commerce,2020,"London, UK",curatedbooksonline@gmail.com,700000,1.7,2,2.2
+190,DesertAdventures,Specialized travel agency offering unique desert expeditions and cultural experiences.,travel,2019,"Dubai, UAE",desertadventures@gmail.com,300000,1.4,1.7,2
+191,Personalized AI,Develops AI models that adapt and personalize experiences for individual users across various applications.,ai,2022,"San Francisco, CA",personalizedai@gmail.com,550000,1.6,1.9,2.2
+192,SkillFlow Learning,"Online platform providing short, interactive courses for professional skill enhancement.",edtech,2021,"Stockholm, Sweden",skillflowlearning@gmail.com,150000,2,2.3,2.6
+193,GreenTech Solutions,Provides consulting and implementation services for sustainable and clean energy projects.,clean energy,2018,"Berlin, Germany",greentechsolutions@gmail.com,600000,1.3,1.6,1.9
+194,FarmToTable Direct,Platform connecting consumers directly with local farms for fresh produce and artisanal goods.,food,2020,"Boise, ID",farmtotabledirect@gmail.com,600000,2.1,2.5,2.3
+195,InvestTech Hub,"Provides technology solutions for investment firms, including market analysis and trading platforms.",fintech,2019,"New York, NY",investtechhub@gmail.com,400000,1.4,1.7,2
+196,SmartAgriculture Systems,"Integrates IoT sensors and AI for intelligent irrigation, fertilization, and pest control in farms.",agritech,2021,"Raleigh, NC",smartagriculturesystems@gmail.com,900000,1.8,2.1,2.4
+197,PrecisionMed AI,"AI-powered platform for personalized medicine, analyzing patient data for tailored treatments.",healthtech,2018,"Boston, MA",precisionmedai@gmail.com,200000,1.2,1.5,1.8
+198,GadgetSphere Online,"E-commerce platform for innovative gadgets, smart devices, and consumer electronics.",e-commerce,2019,"Shenzhen, China",gadgetsphereonline@gmail.com,900000,1.6,1.9,2.2
+199,WorldTour Experiences,Offers customizable multi-country and round-the-world travel itineraries.,travel,2020,"London, UK",worldtourexperiences@gmail.com,300000,1.5,1.8,2.1
+200,AI for Creativity,"AI tools for assisting creative professionals in various fields, from writing to graphic design.",ai,2021,"Tokyo, Japan",aiforcreativity@gmail.com,500000,1.7,2,2.3

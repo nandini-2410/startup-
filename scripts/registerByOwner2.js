@@ -1,7 +1,7 @@
 
 const hre = require("hardhat");
 
-async function getBalance(address) {``
+async function getBalance(address) {
   const balanceBigInt = await hre.ethers.provider.getBalance(address);
   return hre.ethers.formatEther(balanceBigInt);
 }
@@ -13,39 +13,39 @@ async function main() {
 
   console.log("Deploying contract...");
   const IdeaRegistry = await hre.ethers.getContractFactory("IdeaRegistry");
-const ideaRegistry = await IdeaRegistry.deploy(owner2.address);
-await ideaRegistry.waitForDeployment();
-const contractAddress = await ideaRegistry.getAddress();
+  const ideaRegistry = await IdeaRegistry.deploy(owner2.address);
+  await ideaRegistry.waitForDeployment();
+
+  const contractAddress = await ideaRegistry.getAddress();
   console.log("Contract deployed at:", contractAddress);
-
-
-  // Simulate user (owner2) entering idea info
-  const ideaTitle = "Decentralized Farming";
-  const ideaDescription = "AI-powered crop disease detection";
 
   console.log("\n=== Initial ETH Balances ===");
   console.log("Owner1:", await getBalance(owner1.address), "ETH");
   console.log("Owner2:", await getBalance(owner2.address), "ETH");
 
-  // owner2 (user) pays 0.001 ETH to register idea
-  console.log("\n owner2 submitting and paying 0.001 ETH to owner1...");
-  const tx = await ideaRegistry.connect(owner2).registerIdea(ideaTitle, ideaDescription, {
-    value: hre.ethers.parseEther("0.001"),
-  });
+  console.log("\nOwner2 submitting idea and paying 0.001 ETH...");
+  const tx = await ideaRegistry.connect(owner2).registerIdea(
+    "Decentralized Farming",                     // ideaTitle
+    "AI-powered crop disease detection",         // ideaDescription
+    "3 years in agri-tech",                      // experience
+    50000,                                       // minFunding
+    { value: hre.ethers.parseEther("0.01") }    // payment
+  );
   await tx.wait();
-
-  console.log(`\nIdea successfully registered by owner2 in tx: ${tx.hash}`);
+  console.log(`Idea registered in tx: ${tx.hash}`);
 
   console.log("\n=== ETH Balances After Registration ===");
   console.log("Owner1:", await getBalance(owner1.address), "ETH");
   console.log("Owner2:", await getBalance(owner2.address), "ETH");
 
-  const idea = await ideaRegistry.getIdea(0);
-  console.log("\n=== Stored Idea Details (index 0) ===");
-  console.log("Title:", idea.title);
-  console.log("Description:", idea.description);
-  console.log("Registered By:", idea.registeredBy);
-  console.log("Paid Amount:", hre.ethers.formatEther(idea.paidAmount), "ETH");
+  const ideas = await ideaRegistry.getIdeasByUser(owner2.address);
+  console.log("\n=== Stored Ideas by Owner2 ===");
+  ideas.forEach((idea, idx) => {
+    console.log(`\n[${idx}] Title: ${idea.ideaTitle}`);
+    console.log(`Description: ${idea.ideaDescription}`);
+    console.log(`Experience: ${idea.experience}`);
+    console.log(`Min Funding: ${idea.minFunding}`);
+  });
 }
 
 main().catch((err) => {

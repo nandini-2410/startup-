@@ -5,80 +5,97 @@
   <title>On-Chain Registration</title>
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
   <link rel="stylesheet" href="onchain.css">
-  
 </head>
 <body>
-    <div class="nav">
-     <ul>
+  <div class="nav">
+    <ul>
       <li id="signin" onclick="window.location.href = 'signin.html'">Sign in</li>
       <li id="resource" onclick="window.location.href='home.html'">Resource</li>
-      <li id="upspark"onclick="window.location.href='home.html'">UPSPARK</li>
+      <li id="upspark" onclick="window.location.href='home.html'">UPSPARK</li>
       <li id="aboutus">About us</li>
       <li id="signup" onclick="window.location.href = 'signup.html'">Sign up</li>
-     </ul>
+    </ul>
   </div><br><br><br>
-  <div id="container">
-    <header class="idea-box">
-    <h2>On-Chain Idea Registration</h2>
-    <p><strong>Connected Wallet:</strong> <span id="walletAddress">Not connected</span></p>
 
-    <input type="text" id="title" placeholder="Idea Title" />
-    <textarea id="description" placeholder="Idea Description"></textarea>
-    <button onclick="registerIdea()">Submit Idea (0.001 ETH)</button>
-  </div>
-   </header>
-  <script type="module">
-    const contractAddress = "0x574F9B375d1002136cD7845BC9371976EDA113B4"; // Replace this
+  <button id="connectWalletBtn">Connect Wallet</button>
+  <div>Connected: <span id="walletAddress"></span></div>
 
-  let contract, signer;
+  <input id="title" placeholder="Title" />
+  <input id="description" placeholder="Description" />
+  <input id="experience" placeholder="Experience" />
+  <input id="minFunding" placeholder="Funding" type="number" />
+  <button id="submitIdeaBtn">Submit Idea</button>
 
-  async function connectWallet() {
-    if (!window.ethereum) {
-      alert("Please install MetaMask.");
-      return;
+  <script>
+    const contractAddress = "0x574F9B375d1002136cD7845BC9371976EDA113B4";
+    const contractABI = [ {
+    "inputs": [
+      { "internalType": "string", "name": "ideaTitle", "type": "string" },
+      { "internalType": "string", "name": "ideaDescription", "type": "string" },
+      { "internalType": "string", "name": "experience", "type": "string" },
+      { "internalType": "uint256", "name": "minFunding", "type": "uint256" }
+    ],
+    "name": "registerIdea",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },];
+
+    let provider, signer, contract;
+
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("connectWalletBtn").onclick = connectWallet;
+      document.getElementById("submitIdeaBtn").onclick = submitIdea;
+    });
+
+    async function connectWallet() {
+      console.log("Connecting...");
+      if (window.ethereum) {
+        try {
+          provider = new ethers.providers.Web3Provider(window.ethereum);
+          await provider.send("eth_requestAccounts", []);
+          signer = provider.getSigner();
+          contract = new ethers.Contract(contractAddress, contractABI, signer);
+
+          const address = await signer.getAddress();
+          document.getElementById("walletAddress").textContent = address;
+          alert("Wallet Connected!");
+        } catch (e) {
+          console.error(e);
+          alert("Error: " + e.message);
+        }
+      } else {
+        alert("Install MetaMask.");
+      }
     }
 
-    try {
-      await window.ethereum.request({ method: "eth_requestAccounts" });
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      signer = provider.getSigner();
-      const address = await signer.getAddress();
-      document.getElementById("walletAddress").innerText = address;
+    async function submitIdea() {
+      const title = document.getElementById("title").value;
+      const description = document.getElementById("description").value;
+      const experience = document.getElementById("experience").value;
+      const minFunding = document.getElementById("minFunding").value;
 
-      const response = await fetch("/contracts/IdeaRegistry.json");
-      const abiJson = await response.json();
+      if (!contract) {
+        alert("Please connect your wallet first.");
+        return;
+      }
 
-      contract = new ethers.Contract(contractAddress, abiJson.abi, signer);
-      console.log("✅ Wallet connected and contract loaded.");
-    } catch (err) {
-      console.error("MetaMask connection error:", err);
-      alert("❌ Failed to connect MetaMask.");
+      try {
+        const tx = await contract.registerIdea(
+          title,
+          description,
+          experience,
+          minFunding,
+          { value: ethers.utils.parseEther("0.01") }
+        );
+        alert("Transaction sent! Please confirm.");
+        await tx.wait();
+        alert("Submitted! Tx Hash: " + tx.hash);
+      } catch (err) {
+        console.error(err);
+        alert("Submission failed: " + err.message);
+      }
     }
-  }
-
-  async function registerIdea() {
-    const ideaTitle = document.getElementById("title").value;
-    const ideaDescription = document.getElementById("description").value;
-
-    if (!contract || !ideaTitle || !ideaDescription) {
-      alert("Please complete the form and connect MetaMask.");
-      return;
-    }
-
-    try {
-      const tx = await contract.registerIdea(ideaTitle, ideaDescription, {
-        value: ethers.utils.parseEther("0.001"),
-      });
-      await tx.wait();
-      alert("✅ Idea registered successfully!");
-    } catch (err) {
-      console.error(err);
-      alert("❌ Transaction failed.");
-    }
-  }
-
-  window.addEventListener("DOMContentLoaded", connectWallet);
-  window.registerIdea = registerIdea;
   </script>
 </body>
 </html>
