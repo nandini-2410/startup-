@@ -29,18 +29,27 @@
         <a href="https://wa.me/8767779190"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670051.png" width="5%">
         </a>
         <div class="what">chat</div>
-    
+     <form action="/logout" method="GET">
+    <button type="submit" class="logout">Logout</button>
+  </form>
 <script >
 
-    function gotoProtected(page) {
-      const user = localStorage.getItem('loggedInUser');
-      if (user) {
+   function gotoProtected(page) {
+    fetch('/session')
+      .then(response => {
+        if (!response.ok) throw new Error("Not logged in");
+        return response.json();
+      })
+      .then(data => {
+        console.log("Logged in user:", data.username);
         window.location.href = page;
-      } else {
+      })
+      .catch(err => {
         alert("⚠️ Please sign in first!");
         window.location.href = "signin.html";
-      }
-    }
+      });
+  }
+</script>
   
 </script>
 </body>

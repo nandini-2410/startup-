@@ -44,8 +44,8 @@ body{
 }
 .whatsapp{
     position: relative;
-    top: 480px;
-    left: 30px;
+    top: 460px;
+    left: 50px;
     align-items: center;
     
 }
@@ -92,4 +92,23 @@ body{
                  0 0 15px dodgerblue,
                  0 0 25px dodgerblue;
     transform: scale(1.05); /* Optional */
+}
+.logout {
+    position: fixed;
+    top: 578px;
+    left: 1220px;
+    padding: 10px 20px;
+    background-color: #212146;
+    color: white;
+    font-size: 18px;
+    border: 2px solid darkcyan;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout:hover {
+    background-color: darkcyan;
+    color: #212146;
+    transform: scale(1.05);
 }

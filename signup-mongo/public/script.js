@@ -1,52 +1,54 @@
 
-       window.onload = function () {
-    const user = localStorage.getItem('loggedInUser');
-    if (!user) {
-      alert("⚠️ You must be signed in to access this page.");
-      window.location.href = 'signin.html';
+      window.onload = function () {
+  const user = localStorage.getItem('loggedInUser');
+  if (!user) {
+    alert("⚠️ You must be signed in to access this page.");
+    window.location.href = 'signin.html';
+    return; // stop further execution
+  }
+
+  document.getElementById("suggestBtn").addEventListener("click", async () => {
+    const domain = document.getElementById("domain").value.toLowerCase();
+    const funding = parseInt(document.getElementById("funding").value);
+
+    if (funding < 100000) {
+      alert("Please enter funding of at least ₹100000 (1L)");
+      return;
     }
-  };
 
-document.getElementById("suggestBtn").addEventListener("click", async () => {
-  const domain = document.getElementById("domain").value.toLowerCase();
-  const funding = parseInt(document.getElementById("funding").value);
+    const res = await fetch("/get-startups");
+    const data = await res.json();
 
-  if (funding < 100000) {
-    alert("Please enter funding of at least ₹100000 (1L)");
-    return;
-  }
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = ""; // clear previous
 
-  const res = await fetch("/get-startups");
-  const data = await res.json();
+    const filtered = data.filter(
+      (s) =>
+        s.domain.toLowerCase() === domain &&
+        Number(s.minFunding) >= 100000 &&
+        Number(s.minFunding) < funding
+    );
 
-  const resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = ""; // clear previous
+    if (filtered.length === 0) {
+      resultsDiv.innerHTML = "<p>No matching startups found.</p>";
+      return;
+    }
 
-   const filtered = data.filter(
-    (s) =>
-      s.domain.toLowerCase() === domain &&
-      Number(s.minFunding) >= 100000 &&
-      Number(s.minFunding) < funding
-  );
-
-  
-
-  if (filtered.length === 0) {
-    resultsDiv.innerHTML = "<p>No matching startups found.</p>";
-    return;
-  }
-
-  filtered.forEach((startup) => {
-    const card = document.createElement("div");
-    card.innerHTML = `
-      <h3>${startup.name}</h3>
-      <p><strong>Domain:</strong> ${startup.domain}</p>
-      <p><strong>Description:</strong> ${startup.description}</p>
-      <p><strong>Min Funding:</strong> ₹${startup.minFunding}</p>
-    `;
-    card.style.border = "1px solid #ccc";
-    card.style.margin = "10px";
-    card.style.padding = "10px";
-    resultsDiv.appendChild(card);
+    filtered.forEach((startup) => {
+      const card = document.createElement("div");
+      card.innerHTML = `
+        <h3>${startup.name}</h3>
+        <p><strong>Domain:</strong> ${startup.domain}</p>
+        <p><strong>Description:</strong> ${startup.description}</p>
+        <p><strong>Min Funding:</strong> ₹${startup.minFunding}</p>
+        <p><strong>Growth Year 1:</strong> ${startup.growth_year1}</p>
+        <p><strong>Growth Year 2:</strong> ${startup.growth_year2}</p>
+        <p><strong>Growth Year 3:</strong> ${startup.growth_year3}</p>
+      `;
+      card.style.border = "1px solid #ccc";
+      card.style.margin = "10px";
+      card.style.padding = "10px";
+      resultsDiv.appendChild(card);
+    });
   });
-});
+};
