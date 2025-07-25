@@ -16,7 +16,9 @@
       <li id="signup" onclick="window.location.href = 'signup.html'">Sign up</li>
     </ul>
   </div><br><br><br>
-
+<div class="container">
+    <div class="idea-box">
+      <h2>On-Chain Idea Registration</h2>
   <button id="connectWalletBtn">Connect Wallet</button>
   <div>Connected: <span id="walletAddress"></span></div>
 
@@ -26,6 +28,8 @@
   <input id="minFunding" placeholder="Funding" type="number" />
   <button id="submitIdeaBtn">Submit Idea</button>
 
+  </div>
+  </div>
   <script>
     const contractAddress = "0x574F9B375d1002136cD7845BC9371976EDA113B4";
     const contractABI = [ {
