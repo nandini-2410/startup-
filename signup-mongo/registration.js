@@ -1,10 +1,11 @@
+require('dotenv').config({ path: __dirname + '/.env' });
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const port = 3000;
+const PORT = process.env.REG_PORT ;
 
 app.use(cors());
 app.use(express.json());
@@ -12,11 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname));
 
-mongoose.connect('mongodb://127.0.0.1:27017/signupDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log('Connected to MongoDB: signupDB'))
-  .catch((err) => console.error('MongoDB connection error (signupDB):', err));
+mongoose.connect(process.env.MONGO_URI_REGISTER)
+  .then(() => console.log("Connected to registeroff DB"))
+  .catch(err => console.error("MongoDB Error:", err));
+
 
 
 const registerOffConnection = mongoose.createConnection('mongodb://127.0.0.1:27017/registeroff', {
@@ -110,6 +110,4 @@ app.post('/post', async (req, res) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`🚀 Unified server running at http://localhost:${port}`);
-});
+app.listen(PORT, () => console.log(`Registration server running on port ${PORT}`));

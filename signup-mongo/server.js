@@ -1,3 +1,4 @@
+require('dotenv').config({ path: __dirname + '/.env' });
 const express = require("express");
 const mongoose = require("mongoose");
 const session = require("express-session");
@@ -6,7 +7,7 @@ const path = require("path");
 const fs = require("fs");
 const csv = require("csv-parser");
 const app = express();
-const port = 3001;
+const PORT = process.env.AUTH_PORT ;
 
 app.use(cors());
 app.use(express.json());
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/contracts', express.static(path.join(__dirname, 'public/contracts')));
 
 app.use(session({
-  secret: 'nandini', // use a random string here
+  secret: process.env.JWT_SECRET, // use a random string here
   resave: false,
   saveUninitialized: true,
   cookie: { secure: false } // set true only with HTTPS
@@ -30,9 +31,9 @@ app.get('/register', (req, res) => {
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect('mongodb://127.0.0.1:27017/signupDB')
-.then(() => console.log('Connected to MongoDB: signupDB'))
-  .catch((err) => console.error('MongoDB connection error (signupDB):', err));
+mongoose.connect(process.env.MONGO_URI_AUTH)
+  .then(() => console.log("Connected to signupDB"))
+  .catch(err => console.error("MongoDB Error:", err));
 
 
 const registerOffConnection = mongoose.createConnection('mongodb://127.0.0.1:27017/registeroff');
@@ -172,6 +173,4 @@ app.get('/logout', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(` Unified server running at http://localhost:${port}`);
-});
+app.listen(PORT, () => console.log(`Auth server running on port ${PORT}`));
